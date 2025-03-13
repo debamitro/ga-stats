@@ -34,7 +34,7 @@ app.get('/api/v1', async (req, res) => {
     const requestBody = {
       dateRanges: [
         {
-          startDate: '60daysAgo',
+          startDate: '2025-02-01',
           endDate: 'today'
         }
       ],
