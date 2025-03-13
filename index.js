@@ -27,8 +27,8 @@ function siteToPropertyId(site) {
 
 app.get('/api/v1', async (req, res) => {
   try {
-    const pagePath = req.query.page;
-    const propertyId = siteToPropertyId(req.query.site) || '';
+    const pagePath = decodeURIComponent(req.query.page);
+    const propertyId = siteToPropertyId(decodeURIComponent(req.query.site)) || '';
     const property = `properties/${propertyId}`;
     
     const requestBody = {
