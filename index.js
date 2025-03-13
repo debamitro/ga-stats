@@ -1,8 +1,10 @@
 require('dotenv').config();
 const express = require('express');
 const { google } = require('googleapis');
+const cors = require('cors');
 
 const app = express();
+app.use(cors());
 const port = process.env.PORT || 3000;
 
 // Initialize Google Analytics Data API v1
