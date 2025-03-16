@@ -20,6 +20,8 @@ function siteToPropertyId(site) {
   switch (site) {
     case 'blog.codepromptfu.com':
       return process.env.GA_PROPERTY_ID_1;
+    case 'debamitro.github.io':
+      return process.env.GA_PROPERTY_ID_2;
     default:
       return null;
   }
@@ -34,7 +36,7 @@ app.get('/api/v1', async (req, res) => {
     const requestBody = {
       dateRanges: [
         {
-          startDate: '2025-02-01',
+          startDate: '2015-08-14',
           endDate: 'today'
         }
       ],
